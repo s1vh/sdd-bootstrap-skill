@@ -163,7 +163,7 @@ Never fabricate test executions, security assessments, performance measurements,
 
 When an acceptance threshold is unknown, record what must be measured and who must approve the threshold.
 
-For games and gamified systems, preserve the special gameplay-testing authorization rules in `PROJECT_CONVENTIONS.md`: extensive gameplay campaigns require an identified stable `dev` checkpoint and explicit human authorization. Ordinary focused non-gameplay checks are distinct.
+For games and gamified systems, preserve the special gameplay-testing authorization rules in `references/PROJECT_CONVENTIONS.md`: extensive gameplay campaigns require an identified stable `dev` checkpoint and explicit human authorization. Ordinary focused non-gameplay checks are distinct.
 
 ## 8. Deployment-Aware Planning
 
@@ -221,7 +221,7 @@ Freshness checking must be driven by relevance and risk; continuous monitoring i
 
 ## 11. Project Repository and Collaboration Contract
 
-Use the accepted `PROJECT_CONVENTIONS.md v0.1` as the default project operating contract when available.
+Use the accepted `references/PROJECT_CONVENTIONS.md v0.1` as the default project operating contract when available.
 
 Its D01–D10 decisions govern generated-project conventions, Git handoff, authority boundaries, verification, secret handling, licensing separation, and agent collaboration.
 
@@ -332,9 +332,9 @@ Keep persistent artifacts portable, explicit, and understandable without access 
 
 ## 15. Reference Library — v0.1
 
-The Skill includes fourteen Markdown reference documents located alongside SKILL.md in the Skill's root directory: the authoritative PROJECT_CONVENTIONS.md and thirteen supporting research reports.
+The Skill includes fourteen Markdown reference documents located in the `references/` directory, relative to this `SKILL.md` file: the authoritative `references/PROJECT_CONVENTIONS.md` and thirteen supporting research reports. These reference files are part of the Skill distribution and must remain accessible when the Skill is installed or relocated.
 
-Treat `PROJECT_CONVENTIONS.md` as the accepted methodology baseline. Treat research reports as supporting evidence, analytical guidance, and proposed techniques, not as independently approved project decisions.
+Treat references/PROJECT_CONVENTIONS.md as the accepted methodology baseline. Treat research reports as supporting evidence, analytical guidance, and proposed techniques, not as independently approved project decisions.
 
 Consult relevant references throughout the bootstrap process. Before final handoff, review coverage across all thirteen research areas to identify important omissions, contradictions, and unresolved concerns.
 

@@ -1,0 +1,12 @@
+interface:
+  display_name: sdd bootstrap
+  short_description: Transform IT ideas into implementation-ready SDD plans.
+  icon_small: assets/icon-small.svg
+  icon_large: assets/icon-large.svg
+policy:
+  products:
+    - chatgpt
+    - codex
+    - api
+    - atlas
+  allow_implicit_invocation: true

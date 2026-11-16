@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="docFillS" x1="18" y1="12" x2="43" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FAFF"/>
+      <stop offset="1" stop-color="#D9E7FF"/>
+    </linearGradient>
+    <linearGradient id="docStrokeS" x1="18" y1="12" x2="46" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4F8DFF"/>
+      <stop offset="1" stop-color="#2358D8"/>
+    </linearGradient>
+    <linearGradient id="arrowS" x1="10" y1="32" x2="20" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD55D"/>
+      <stop offset="1" stop-color="#FFB100"/>
+    </linearGradient>
+  </defs>
+  <rect x="22" y="11" width="23" height="42" rx="6" fill="url(#docFillS)" stroke="url(#docStrokeS)" stroke-width="2.4"/>
+  <path d="M37 11v8h8" fill="#B9D0FF"/>
+  <path d="M37 11v8h8" stroke="#7FAFFF" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M30.4 21.1 35 18.8l4.6 2.3-4.6 2.3-4.6-2.3Z" fill="#3B77F5"/>
+  <path d="M31.2 25.6 35 23.7l3.8 1.9M31.8 28.9 35 27.3l3.2 1.6" stroke="#6EA9FF" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="28.5" cy="35.7" r="2.8" fill="#1FC48A"/>
+  <path d="m27.3 35.7.9.9 1.7-2" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M33 35.7h7.7M33 41.1h7.7M33 46.5h5.7" stroke="#7098D9" stroke-width="2.1" stroke-linecap="round"/>
+  <rect x="5.6" y="18.7" width="7.3" height="7.3" rx="2" fill="#B6A2F7" stroke="#6F58D9" stroke-width="1.4" transform="rotate(-8 5.6 18.7)"/>
+  <rect x="8.8" y="30.2" width="7.3" height="7.3" rx="2" fill="#82D8B8" stroke="#1FA36D" stroke-width="1.4" transform="rotate(8 8.8 30.2)"/>
+  <rect x="14.9" y="23.7" width="7.3" height="7.3" rx="2" fill="#8BC3FF" stroke="#3A88E8" stroke-width="1.4" transform="rotate(9 14.9 23.7)"/>
+  <path d="M15.5 32c0-1.5.8-2.8 2-3.7" stroke="url(#arrowS)" stroke-width="3.3" stroke-linecap="round"/>
+  <path d="M15.2 32.4 19 30.2l-.6 4.4" fill="#FFC83D"/>
+  <path d="M45.8 32h5.6c1.7 0 3 1.3 3 3v4.5" stroke="#2A95FF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M54.4 35.5v-1.8c0-1.8 1.4-3.2 3.2-3.2H60" stroke="#2A95FF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="57" cy="30.5" r="2.1" fill="#5D90FF"/>
+  <circle cx="57" cy="37.8" r="2.1" fill="#6F63E8"/>
+  <circle cx="57" cy="45.1" r="2.1" fill="#19B58A"/>
+</svg>
