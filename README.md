@@ -1,0 +1,2 @@
+# sdd-bootstrap-skill
+Turn informal software and IT solution ideas, notes, sketches, documents, or existing project context into clear specifications, architecture decisions, and implementation-ready project plans. Use for collaborative requirements discovery, ambiguity resolution, technology evaluation, risk-aware planning, and structured handoffs to human developers or AI coding agents. Preserve human decision authority, traceability, creative freedom, and provider neutrality.
