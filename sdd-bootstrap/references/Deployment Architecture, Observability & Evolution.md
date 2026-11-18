@@ -1,4 +1,4 @@
-﻿# Research 08 — Deployment Architecture, Observability & Evolution
+# Research 08 — Deployment Architecture, Observability & Evolution
 
 
 > **Reviewed and enriched candidate — 12 November 2026 (v0.2).** Independently revised from the 11 November Drive draft. This is an advanced knowledge reference for the SDD Bootstrap Skill, **not** a deployment plan approved for any real project, a tested infrastructure configuration, or proof of operational readiness. Source links and proposed heuristics are identified below. This Drive edition has been editorially aligned with the accepted methodology conventions; historical source drafts remain distinguishable through Drive revision history.
@@ -25,7 +25,7 @@ The recommended approach is **risk-proportionate operational design**. A solo st
 | Volatile | Pricing, free-tier terms, provider features, runtime versions, legal interpretations or quotas requiring a fresh check at decision time. |
 
 
-The report is grounded in published guidance from ISO/IEC/IEEE 42010, NIST SSDF and CSF, Google SRE, OpenTelemetry, SLSA, OWASP, HHS, W3C, FinOps and official provider documentation [S01–S25]. The source list is selective rather than a claim that every recommendation has empirical proof. Standards define vocabulary and controls; they do not decide a particular project's cloud, SLO or topology. Research conclusions and the v0.1 rules below are proposals to test, not universal mandates. The accepted [`PROJECT_CONVENTIONS.md`](https://drive.google.com/file/d/1EMvmx0or0fgv7hqKJarOmdt4e5kGKo_y/view) is the authoritative methodology contract for generated-project paths, baseline Git history, human approval and handoff. Its approved D01–D10 rules prevail over conflicting research examples; project-specific exceptions still require appropriate human authorization.
+The report is grounded in published guidance from ISO/IEC/IEEE 42010, NIST SSDF and CSF, Google SRE, OpenTelemetry, SLSA, OWASP, HHS, W3C, FinOps and official provider documentation [S01–S25]. The source list is selective rather than a claim that every recommendation has empirical proof. Standards define vocabulary and controls; they do not decide a particular project's cloud, SLO or topology. Research conclusions and the v0.1 rules below are proposals to test, not universal mandates. The accepted [`PROJECT_CONVENTIONS.md`](PROJECT_CONVENTIONS.md) is the authoritative methodology contract for generated-project paths, baseline Git history, human approval and handoff. Its approved D01–D10 rules prevail over conflicting research examples; project-specific exceptions still require appropriate human authorization.
 
 
 ### Bootstrap boundary and status vocabulary

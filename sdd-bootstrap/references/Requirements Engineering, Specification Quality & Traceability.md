@@ -1,6 +1,6 @@
-﻿# Research 02 — Requirements Engineering, Specification Quality & Traceability
+# Research 02 — Requirements Engineering, Specification Quality & Traceability
 
-> **Editorial review — 11 November 2026.** Revised from the original Deep Research report, preserving its research scope and examples. Previously missing inline references were checked and repaired where possible; unsupported empirical assertions were qualified or corrected. Bibliographic links are standalone URLs, not inaccessible session IDs. This is a research reference, not execution evidence. The editorial correction and verification records belong to the historical accompanying archive; the accepted methodology baseline is the separately maintained [`PROJECT_CONVENTIONS.md`](https://drive.google.com/file/d/1EMvmx0or0fgv7hqKJarOmdt4e5kGKo_y/view).
+> **Editorial review — 11 November 2026.** Revised from the original Deep Research report, preserving its research scope and examples. Previously missing inline references were checked and repaired where possible; unsupported empirical assertions were qualified or corrected. Bibliographic links are standalone URLs, not inaccessible session IDs. This is a research reference, not execution evidence. The editorial correction and verification records belong to the historical accompanying archive; the accepted methodology baseline is the separately maintained [`PROJECT_CONVENTIONS.md`](PROJECT_CONVENTIONS.md).
 
 
 *Advanced knowledge reference for the SDD Bootstrap Skill research series*
@@ -533,7 +533,7 @@ A minimal bootstrap should remain usable with nothing more than a text editor, G
 
 ### Minimal v0.1 documentation architecture
 
-The **accepted methodology defaults** are defined by [Project Conventions (§§2–4)](https://drive.google.com/file/d/1EMvmx0or0fgv7hqKJarOmdt4e5kGKo_y/view). The example below is a **conditional view**, not a mandatory empty scaffold; a generated project must also satisfy the authorized initial Git baseline and handoff rules.
+The **accepted methodology defaults** are defined by [Project Conventions (§§2–4)](PROJECT_CONVENTIONS.md). The example below is a **conditional view**, not a mandatory empty scaffold; a generated project must also satisfy the authorized initial Git baseline and handoff rules.
 
 ```text
 /
@@ -1512,4 +1512,4 @@ The v0.1 Skill should therefore optimize for **visible intent, meaningful eviden
 
 This review includes source checks for the assertions repaired here, consistency fixes, static formatting inspection and parsing of extractable YAML/JSON examples. It is **not** a claim that all historical citations have been exhaustively rechecked, that all linked pages will remain reachable, or that any described software, CI, API, migration, security control or deployment was implemented and tested. Publication and product versions are an as-of snapshot and should be refreshed before decisions that depend on them.
 
-For the change log and exact validation scope, consult the adjacent `CORRECTIONS.md` and `VERIFICATION_REPORT.md` in this research bundle.
+Historical editorial records for Research 01–07 (preserved in the distribution repository, **not shipped with standalone Skill installations**): [CORRECTIONS.md](https://github.com/s1vh/sdd-bootstrap-skill/blob/main/research-archive/editorial-reviews/research-01-07/CORRECTIONS.md) and [VERIFICATION_REPORT.md](https://github.com/s1vh/sdd-bootstrap-skill/blob/main/research-archive/editorial-reviews/research-01-07/VERIFICATION_REPORT.md). These records document research editing and citation checks; they are neither runtime dependencies nor evidence that the Skill or a generated project has been tested.

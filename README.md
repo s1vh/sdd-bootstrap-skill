@@ -43,11 +43,19 @@ sdd-bootstrap-skill/
 ├── LICENSE
 ├── assets/
 │   └── sdd-bootstrap-overview.png
+├── research-archive/
+│   └── editorial-reviews/
+│       └── research-01-07/
+│           ├── README.md
+│           ├── CORRECTIONS.md
+│           └── VERIFICATION_REPORT.md
 └── sdd-bootstrap/
     ├── SKILL.md
+    ├── LICENSE
     ├── agents/
     │   └── openai.yaml
     ├── assets/
+    │   ├── icon.svg
     │   ├── icon-small.svg
     │   ├── icon-large.svg
     │   └── icon-large.png
@@ -150,6 +158,12 @@ These references are meant to **support** the skill's reasoning.
 - `PROJECT_CONVENTIONS.md` is the normative baseline for generated project conventions.
 - The other reports are supporting research, not automatically approved project decisions.
 
+## Historical research archive
+
+The distribution repository also preserves the original [Research 01–07 editorial correction and verification records](./research-archive/editorial-reviews/research-01-07/README.md).
+
+These records are provided **solely for historical traceability of the research phase**. They are **not included in the installable `sdd-bootstrap/` skill**, are **not required or consulted during project bootstrapping**, and do **not** establish that the Skill, a project implementation, or any deployment has been tested or approved.
+
 ## Compatibility and portability
 
 This repository is intentionally structured to keep the skill portable across different agent ecosystems.
@@ -174,4 +188,4 @@ Feedback, issue reports, and proposed improvements are welcome.
 
 ## License
 
-This repository is distributed under the **MIT License**. See [`LICENSE`](./LICENSE).
+This repository is distributed under the **MIT License**. See [`LICENSE`](./LICENSE). The installable skill also includes its own copy at [`sdd-bootstrap/LICENSE`](./sdd-bootstrap/LICENSE), so redistribution of that directory retains the license notice. Generated projects do not automatically inherit this license.

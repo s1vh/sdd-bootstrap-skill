@@ -14,7 +14,7 @@ Complete this profile before treating the generated project as ready for impleme
 | --- | --- |
 | Project name and purpose | `TBD` |
 | Project type | `TBD` (web app / game / gamified system / mobile / other) |
-| Current scope and non-goals | See [`PRD.md`](PRD.md) |
+| Current scope and non-goals | See the generated project's `docs/PRD.md` (created during bootstrap; not part of the Skill reference library) |
 | Maintainer / human decision authority | `TBD` |
 | Language of public README | `TBD` (default: English) |
 | Language of GDD, if any | `TBD` (default: English) |

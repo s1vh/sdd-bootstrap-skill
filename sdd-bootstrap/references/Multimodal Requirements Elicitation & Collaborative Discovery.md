@@ -1,6 +1,6 @@
 # Research 01 — Multimodal Requirements Elicitation & Collaborative Discovery
 
-> **Editorial review — 11 November 2026.** Revised from the original Deep Research report, preserving its research scope and examples. Previously missing inline references were checked and repaired where possible; unsupported empirical assertions were qualified or corrected. Bibliographic links are standalone URLs, not inaccessible session IDs. This is a reference document, not execution evidence. See `CORRECTIONS.md` and `VERIFICATION_REPORT.md` in the accompanying archive.
+> **Editorial review — 11 November 2026.** Revised from the original Deep Research report, preserving its research scope and examples. Previously missing inline references were checked and repaired where possible; unsupported empirical assertions were qualified or corrected. Bibliographic links are standalone URLs, not inaccessible session IDs. This is a reference document, not execution evidence. Historical editorial records are kept outside the installable Skill in the distribution repository’s research archive.
 
 
 **Advanced knowledge reference for a provider-agnostic Spec-Driven Development Bootstrap Skill**
@@ -2098,4 +2098,4 @@ The resulting engineering principle for the bootstrap process is concise:
 
 This review includes source checks for the assertions repaired here, consistency fixes, static formatting inspection and parsing of extractable YAML/JSON examples. It is **not** a claim that all historical citations have been exhaustively rechecked, that all linked pages will remain reachable, or that any described software, CI, API, migration, security control or deployment was implemented and tested. Publication and product versions are an as-of snapshot and should be refreshed before decisions that depend on them.
 
-For the change log and exact validation scope, consult the adjacent `CORRECTIONS.md` and `VERIFICATION_REPORT.md` in this research bundle.
+Historical editorial records for Research 01–07 (preserved in the distribution repository, **not shipped with standalone Skill installations**): [CORRECTIONS.md](https://github.com/s1vh/sdd-bootstrap-skill/blob/main/research-archive/editorial-reviews/research-01-07/CORRECTIONS.md) and [VERIFICATION_REPORT.md](https://github.com/s1vh/sdd-bootstrap-skill/blob/main/research-archive/editorial-reviews/research-01-07/VERIFICATION_REPORT.md). These records document research editing and citation checks; they are neither runtime dependencies nor evidence that the Skill or a generated project has been tested.

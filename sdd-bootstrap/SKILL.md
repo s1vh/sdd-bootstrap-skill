@@ -1,5 +1,6 @@
 ---
 name: sdd-bootstrap
+license: MIT
 description: 'Turn informal software and IT solution ideas, notes, sketches, documents, or existing project context into clear specifications, architecture decisions, and implementation-ready project plans.
 
 
@@ -221,7 +222,7 @@ Freshness checking must be driven by relevance and risk; continuous monitoring i
 
 ## 11. Project Repository and Collaboration Contract
 
-Use the accepted `references/PROJECT_CONVENTIONS.md v0.1` as the default project operating contract when available.
+Use the accepted `references/PROJECT_CONVENTIONS.md` (v0.1) as the default project operating contract when available.
 
 Its D01–D10 decisions govern generated-project conventions, Git handoff, authority boundaries, verification, secret handling, licensing separation, and agent collaboration.
 
@@ -334,7 +335,7 @@ Keep persistent artifacts portable, explicit, and understandable without access 
 
 The Skill includes fourteen Markdown reference documents located in the `references/` directory, relative to this `SKILL.md` file: the authoritative `references/PROJECT_CONVENTIONS.md` and thirteen supporting research reports. These reference files are part of the Skill distribution and must remain accessible when the Skill is installed or relocated.
 
-Treat references/PROJECT_CONVENTIONS.md as the accepted methodology baseline. Treat research reports as supporting evidence, analytical guidance, and proposed techniques, not as independently approved project decisions.
+Treat `references/PROJECT_CONVENTIONS.md` as the accepted methodology baseline. Treat research reports as supporting evidence, analytical guidance, and proposed techniques, not as independently approved project decisions.
 
 Consult relevant references throughout the bootstrap process. Before final handoff, review coverage across all thirteen research areas to identify important omissions, contradictions, and unresolved concerns.
 
