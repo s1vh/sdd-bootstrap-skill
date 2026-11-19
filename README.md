@@ -45,10 +45,15 @@ sdd-bootstrap-skill/
 │   └── sdd-bootstrap-overview.png
 ├── research-archive/
 │   └── editorial-reviews/
-│       └── research-01-07/
-│           ├── README.md
-│           ├── CORRECTIONS.md
-│           └── VERIFICATION_REPORT.md
+│       ├── research-01-07/
+│       │   ├── README.md
+│       │   ├── CORRECTIONS.md
+│       │   └── VERIFICATION_REPORT.md
+│       └── spec-driven-development-agentic-era/
+│           ├── CLAIM_TO_SOURCE_MAP.md
+│           ├── UNRESOLVED_ITEMS.md
+│           ├── VALIDATION.md
+│           └── REPORT.diff
 └── sdd-bootstrap/
     ├── SKILL.md
     ├── LICENSE
@@ -160,9 +165,12 @@ These references are meant to **support** the skill's reasoning.
 
 ## Historical research archive
 
-The distribution repository also preserves the original [Research 01–07 editorial correction and verification records](./research-archive/editorial-reviews/research-01-07/README.md).
+The distribution repository preserves two separate editorial review archives:
 
-These records are provided **solely for historical traceability of the research phase**. They are **not included in the installable `sdd-bootstrap/` skill**, are **not required or consulted during project bootstrapping**, and do **not** establish that the Skill, a project implementation, or any deployment has been tested or approved.
+- [Research 01–07 correction and verification records](./research-archive/editorial-reviews/research-01-07/README.md) — the original historical editorial logs for seven supporting research reports.
+- [Spec-Driven Development in the Agentic Era — claim-to-source map](./research-archive/editorial-reviews/spec-driven-development-agentic-era/CLAIM_TO_SOURCE_MAP.md), [unresolved evidence ledger](./research-archive/editorial-reviews/spec-driven-development-agentic-era/UNRESOLVED_ITEMS.md), [validation record](./research-archive/editorial-reviews/spec-driven-development-agentic-era/VALIDATION.md), and [review diff](./research-archive/editorial-reviews/spec-driven-development-agentic-era/REPORT.diff) — documentation of the later citation-rehabilitation pass, including the limits of historical source attribution.
+
+These records are provided **solely for research traceability**. They are **not included in the installable `sdd-bootstrap/` skill**, are **not required or consulted during project bootstrapping**, and do **not** establish that the Skill, a project implementation, or any deployment has been tested or approved. Recovered public evidence does not establish the identity of inaccessible original session citations.
 
 ## Compatibility and portability
 
