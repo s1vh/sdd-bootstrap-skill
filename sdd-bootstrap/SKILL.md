@@ -30,10 +30,11 @@ Apply these principles throughout the workflow:
 2. **Collaborative reasoning:** Encourage constructive disagreement, challenge assumptions, consider alternatives, and accommodate evolving understanding.
 3. **Evidence before certainty:** Distinguish observed facts, interpretations, assumptions, proposals, approved decisions, unresolved questions, and actual verification evidence.
 4. **Provider neutrality:** Keep specifications and architectural knowledge independent of particular models, agents, platforms, and vendors whenever practical.
-5. **Proportionality:** Match documentation, analysis, formalization, and verification effort to the project's complexity, uncertainty, and risk.
+5. **Proportionality:** Match documentation, analysis, formalization, and verification effort to the project's complexity, uncertainty, and risk; rich Skill instructions must not force heavyweight generated repositories.
 6. **Progressive elaboration:** Resolve consequential uncertainty before committing to expensive decisions. Defer safely reversible choices when appropriate.
 7. **Traceability:** Preserve meaningful relationships between stakeholder intent, requirements, decisions, implementation tasks, and verification.
 8. **Honest readiness:** Never confuse planned work with completed work, drafted artifacts with approved decisions, or proposed tests with executed tests.
+9. **Critical-path feasibility:** Prefer a genuinely workable current-phase outcome over a superficially compliant technology choice. Reject candidates violating hard constraints, and investigate blocking unknowns before committing to implementation dependencies.
 
 These principles guide collaboration without restricting participant identity, creativity, or independent judgment.
 
@@ -68,6 +69,8 @@ Identify, where relevant:
 - Functional capabilities and quality expectations.
 - Known technologies, environments, and external dependencies.
 - Budget, timeframe, skills, operational responsibilities, and delivery constraints.
+- For a pilot or MVP: essential end-to-end user journeys, what failure would invalidate the demonstration, current hard limits, and goals reserved for a later commercial/scale phase.
+- Distinctions between absolute constraints (e.g., no charges or payment card), negotiable preferences (e.g., reuse one host indefinitely), and unvalidated assumptions (e.g., expected traffic).
 - Existing materials and relevant historical decisions.
 - Assumptions, uncertainties, contradictions, and potential risks.
 
@@ -90,6 +93,10 @@ Prioritize ambiguities that materially affect requirements, architecture, safety
 
 Avoid leading questions that disguise preferred technologies as stakeholder needs.
 
+When a participant lacks infrastructure expertise, translate provider and cost terminology into consequences they can judge: what must work, unacceptable charges, deadline, permissible account terms, and the cost of changing course. Ask only the highest-impact missing question; do not require an infrastructure questionnaire from every project. Reuse already supplied preferences and do not silently elevate a future convenience into a current hard requirement.
+
+For consequential hosting choices, establish **current-phase success**, **non-negotiable constraints**, **preferred trade-offs**, and **later-phase goals** before comparing providers. If these conflict, explain the effect and request a targeted human decision; do not claim all can be satisfied by an unverified candidate.
+
 Do not manufacture consensus between participants. Record disagreements, identify their consequences, and seek an appropriate decision.
 
 ## 5. Requirements and Specification Engineering
@@ -101,7 +108,7 @@ Maintain clear distinctions between:
 - Goals and stakeholder needs.
 - Functional requirements.
 - Quality requirements and measurable scenarios.
-- Constraints and preferences.
+- Hard/veto constraints, negotiable preferences, and future-phase goals (kept distinct).
 - Domain rules and invariants.
 - Assumptions and open questions.
 - Design decisions.
@@ -110,7 +117,7 @@ Maintain clear distinctions between:
 
 Use stable identifiers where they improve traceability, such as `REQ-001`, `ADR-001`, and `TASK-001`.
 
-Requirements should be necessary, understandable, appropriately scoped, feasible, traceable, and verifiable.
+Requirements should be necessary, understandable, appropriately scoped, feasible, traceable, and verifiable. Identify the few **critical end-to-end journeys** whose failure would invalidate an MVP or pilot; state their acceptance evidence and deployment/runtime dependencies where relevant.
 
 Use structured natural language by default. Introduce EARS, Given/When/Then, decision tables, state machines, schemas, or formal methods when they provide meaningful additional precision.
 
@@ -130,13 +137,15 @@ For consequential architectural decisions:
 
 1. Identify the requirements and constraints driving the decision.
 2. Expose assumptions and uncertainty.
-3. Consider genuinely viable alternatives.
-4. Compare their trade-offs, risks, operational consequences, and reversibility.
+3. Identify genuinely viable alternatives, **first screening each against hard constraints and critical user journeys**. A low price, attractive scaling claim, or high preference score cannot compensate for a veto failure.
+4. Compare the **feasible** alternatives' trade-offs, risks, operational consequences, reversibility, and likely migration effort between pilot and later launch. Different providers for different horizons are acceptable when justified.
 5. Recommend an approach supported by available evidence.
 6. Obtain the appropriate human decision or explicitly defer it.
 7. Record significant decisions and rationale in Architecture Decision Records.
 
 Evaluate technologies against project needs, current documentation, maintenance, interoperability, security, cost, team capabilities, and deployment constraints.
+
+For a consequential runtime/platform selection, examine the **specific plan and full stack**: CPU time per invocation, runtime/library compatibility, wall time, memory, request/storage/egress quotas, authentication flows, quota exhaustion behavior, account/card requirements, overage exposure, and permitted commercial/noncommercial use. Explicitly label evidence as documented, assumed, unverified, or measured. When a critical path cannot be established from reliable documentation, define a small **authorized feasibility spike** before investing in dependent architecture. The Skill plans that spike; it does not silently deploy or execute it. If no alternative meets the hard constraints, state the conflict and seek a decision rather than inventing viability.
 
 Do not prescribe microservices, cloud hosting, relational databases, specific languages, or other architectures without justification.
 
@@ -164,7 +173,7 @@ Never fabricate test executions, security assessments, performance measurements,
 
 When an acceptance threshold is unknown, record what must be measured and who must approve the threshold.
 
-For games and gamified systems, preserve the special gameplay-testing authorization rules in `references/PROJECT_CONVENTIONS.md`: extensive gameplay campaigns require an identified stable `dev` checkpoint and explicit human authorization. Ordinary focused non-gameplay checks are distinct.
+For games and gamified systems, preserve the special gameplay-testing authorization rules in `references/PROJECT_CONVENTIONS.md`: extensive gameplay campaigns require an identified stable `dev` checkpoint and explicit human authorization. Ordinary focused non-gameplay checks are distinct. For subsequent implementation, routine topic-to-`dev` merges use **only relevant inexpensive checks** without repeated human approval; expensive tests need the applicable explicit authorization, and release-critical checks follow the authorized release gate.
 
 ## 8. Deployment-Aware Planning
 
@@ -178,13 +187,15 @@ When relevant, document:
 - Configuration and secret-management requirements.
 - Build, release, and deployment approaches.
 - Operational ownership, monitoring, recovery, and rollback.
-- External accounts, permissions, costs, and prerequisites.
+- External accounts, permissions, **actual cost exposure**, plan limits, permitted use and prerequisites.
+- A current pilot/development horizon and a potential commercial/scale horizon when their constraints differ; provider continuity is a preference unless expressly made mandatory.
+- A small set of critical end-to-end flows (for example OAuth callback through authenticated session), provider-tier feasibility evidence, and early blocking validation tasks.
 
 Distinguish proposed infrastructure from provisioned infrastructure.
 
 Do not assume that cloud services, integrations, accounts, secrets, or deployment permissions already exist.
 
-Never claim production readiness from planning artifacts.
+Never claim production readiness from planning artifacts. A plan-tier quota or compatibility claim without a tested critical flow is **not** evidence that the flow works. A viable infrastructure decision is conditional until its material unknowns are resolved. No development/topic branch may be a deployment source under the generated default contract; releases originate from an approved stable `main` state or a justified, authorized production branch.
 
 ## 9. Capability and Integration Discovery
 
@@ -222,9 +233,7 @@ Freshness checking must be driven by relevance and risk; continuous monitoring i
 
 ## 11. Project Repository and Collaboration Contract
 
-Use the accepted `references/PROJECT_CONVENTIONS.md` (v0.1) as the default project operating contract when available.
-
-Its D01–D10 decisions govern generated-project conventions, Git handoff, authority boundaries, verification, secret handling, licensing separation, and agent collaboration.
+Use `references/PROJECT_CONVENTIONS.md` (experimental v0.2 candidate) as the default operating contract for pilot testing. Its inherited D01–D10 principles and proposed D11–D14 refinements govern generated-project conventions, optional Git handoff, attribution, integration and release authority, verification, secret handling, and agent collaboration. The status remains experimental until human-reviewed and promoted to `main`.
 
 The contract is adaptable through explicitly authorized, documented project-specific exceptions.
 
@@ -248,17 +257,17 @@ Maintain one authoritative location for each important fact, using links and con
 
 ### Git and handoff
 
-For new project bootstraps, the default convention requires an initialized Git repository with a truthful initial commit and `main` and `dev` branches, unless an authorized exception applies.
+A new project's default deliverable is a **project-files ZIP without an initialized `.git/` directory**, unless an authorized participant explicitly requests Git initialization or remote repository creation. Always generate a **stack-aware `.gitignore`** protecting `/.secrets/`, `/secrets/`, credentials and appropriate disposable build/cache outputs; do not suppress intended deliverables. Git initialization and the account/provider used to host it are optional, separately authorized steps.
 
-Offer a downloadable Git ZIP. Where an authorized, capable GitHub integration exists, also offer direct creation in the authenticated user's personal account.
+If Git is requested, verify the chosen author/committer identity from reliable available information or ask only for missing fields. **Never invent a human/agent identity, email, model revision or platform.** Remote repository creation/publication needs explicit approval of destination, account, name and visibility. A GitHub connection or historical login alone does not prove usable commit attribution. A personal account and its email are not the same as an agent's identity.
 
-The human selects the delivery channel. Remote repository creation requires explicit authorization of the account, repository name, and visibility.
+Even without `.git/`, generate a concise **future Git collaboration contract** in `docs/PROJECT_CONVENTIONS.md` and route agents to it from `AGENTS.md`. On the first transition from no Git to an initialized repository, verify that the intended `.gitignore` survived and that excluded files have not accidentally become tracked; record this **once**, repeating only on a relevant configuration change or discovered problem. `.gitignore` does not prevent agents reading secrets.
 
-Never invent author or committer identities. Request only missing identity details when required for the selected delivery mechanism.
+Under approved project/task scope, development agents **autonomously** create topic branches, commit work, perform relevant cheap checks, merge completed verified topic branches into `dev` **without squash** (prefer an explicit `--no-ff` merge commit), and safely delete the integrated topic branches after verifying ancestry and publication dependencies. No separate human approval is needed for each ordinary local topic-to-`dev` merge. Preserve original commit graph, true attribution and traceable source branch names/SHAs in integration records. Keep blocked/unverified branches temporarily; never force-delete unique work. Remote push/delete permissions are separate from local authority.
 
-AI contributors may optionally identify themselves as co-authors of commits they materially contribute to, unless the effective project policy or a specific instruction prohibits it. Self-attribution is permitted by default, never compulsory, and must be truthful.
+`main` represents stable, human-approved builds/releases; `dev` is a more granular integration line with **no blanket regression-free or production-readiness guarantee**. The human ordinarily promotes `dev` to `main` manually. Agents can propose promotion but MUST NOT carry it out without **specific human authorization**, and MUST NOT deploy from `dev` or topic branches. Rebase/history rewriting needs specific authorization. Optional `prod*` branches require actual release/deployment justification and authorized use.
 
-Use focused development branches, preserve meaningful provenance, and respect the human-controlled `dev` to `main` release gate.
+Agent self-attribution remains **optional by default**, subject to human project policy. When used, `Co-authored-by:` trailers follow a readable change summary separated by one blank line, then consecutive trailers ordered by material contribution. Attribute only contributors to the particular commit; do not copy prior trailers automatically. A persistent **project-agent identity** may be a name, role or unique assigned identifier; record exact model and `@ platform` **only when known**, independently, never guessed from prior commits or environment conventions. Use a legitimately authorized mailbox/verified account identity or a clearly non-deliverable placeholder; do not borrow the human owner's address or a platform bot's identity by default. Optional context/agent registers must be proportionate to project complexity and support truthful rehydration, not identity impersonation.
 
 ### Secrets and licenses
 
@@ -302,9 +311,9 @@ Before declaring a bootstrap implementation-ready, check that:
 3. Architecture and technology decisions are justified or explicitly deferred.
 4. Relevant quality, security, deployment, and verification concerns have been addressed proportionately.
 5. Documentation is internally consistent and traceable.
-6. The selected Git handoff has actually been created and verified, or an authorized exception is documented.
+6. The selected **project-files handoff** exists and is verified. Git is **optional by default**; if specifically requested, validate repository/branch/commit state, authentic identity and any authorized remote publication. A bootstrap without `.git/` is not incomplete merely for lacking Git.
 7. Secrets, licensing, and external-operation boundaries are respected.
-8. At least one approved-scope implementation task is genuinely unblocked.
+8. At least one approved-scope implementation task is genuinely unblocked. Any material unverified provider-tier critical flow is scheduled as an early feasibility gate before dependent implementation; do not mislabel the unknown as passed.
 9. No critical unresolved issue invalidates the proposed starting task.
 
 If these conditions are not satisfied, deliver an explicitly labeled **incomplete bootstrap** with outstanding blockers and next actions.
@@ -331,11 +340,11 @@ Keep persistent artifacts portable, explicit, and understandable without access 
 
 **Success means making informed, collaborative implementation possible—not maximizing documentation, automation, or apparent certainty.**
 
-## 15. Reference Library — v0.1
+## 15. Reference Library — experimental v0.2 candidate
 
 The Skill includes fourteen Markdown reference documents located in the `references/` directory, relative to this `SKILL.md` file: the authoritative `references/PROJECT_CONVENTIONS.md` and thirteen supporting research reports. These reference files are part of the Skill distribution and must remain accessible when the Skill is installed or relocated.
 
-Treat `references/PROJECT_CONVENTIONS.md` as the accepted methodology baseline. Treat research reports as supporting evidence, analytical guidance, and proposed techniques, not as independently approved project decisions.
+Treat `references/PROJECT_CONVENTIONS.md` as the **experimental v0.2 operating-contract candidate**, grounded in the accepted v0.1 principles; treat it as stable only after human-approved promotion. Treat research reports as supporting evidence, analytical guidance, and proposed techniques, not as independently approved project decisions.
 
 Consult relevant references throughout the bootstrap process. Before final handoff, review coverage across all thirteen research areas to identify important omissions, contradictions, and unresolved concerns.
 
